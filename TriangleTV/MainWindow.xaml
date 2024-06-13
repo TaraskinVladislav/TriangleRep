@@ -1,0 +1,26 @@
+﻿<Window x:Class="TriangleDrawingWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Triangle Drawing" Height="450" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Сторона А:"/>
+            <TextBox x:Name="txtSideA" Width="50" Margin="5" />
+            <TextBlock Text="Сторона В:"/>
+            <TextBox x:Name="txtSideB" Width="50" Margin="5" />
+            <TextBlock Text="Сторона С:"/>
+            <TextBox x:Name="txtSideC" Width="50" Margin="5" />
+            <Button Content="Нарисовать треугольник" Click="DrawTriangle_Click" Margin="10"/>
+        </StackPanel>
+
+        <TextBox x:Name="txtTriangleType" Grid.Row="1" Margin="10" IsReadOnly="True" HorizontalAlignment="Center" />
+
+        <Canvas x:Name="canvas" Grid.Row="2" Background="White"/>
+    </Grid>
+</Window>
